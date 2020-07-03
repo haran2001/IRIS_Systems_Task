@@ -2,5 +2,5 @@ language: ruby
 rvm:
   - 2.6.1
 script:
-  - test/controllers/comments_controller_test.rb
+  - ruby test/controllers/comments_controller_test.rb
 
