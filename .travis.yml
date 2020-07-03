@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.6.1
+before_install:
+  - rvm install ruby-railties
 script:
   - rails test/controllers/comments_controller_test.rb
 
