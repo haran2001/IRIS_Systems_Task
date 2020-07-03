@@ -4,8 +4,12 @@ before_install:
   - rvm install ruby-railties
   - gem install bundler
   - gem update bundler
+
+install:
   - gem install rails
+  - bundle config set deployment 'true'
+
 script:
   - rails test test
-  
+
 
