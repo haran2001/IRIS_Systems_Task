@@ -9,6 +9,8 @@ install:
   - gem install rails
 
 script:
+  - gem install bundler
+  - gem update bundler
   - bundle config set deployment 'true'
   - rails test test
 
