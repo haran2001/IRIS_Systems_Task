@@ -3,6 +3,9 @@ rvm:
   - 2.6.1
 before_install:
   - rvm install ruby-railties
+  - gem install bundler
+install:
+  - gem install rails
 script:
-  - rails test/controllers/comments_controller_test.rb
+  - rails test/controllers/comments_controller_test.ruby
 
