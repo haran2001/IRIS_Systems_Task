@@ -7,9 +7,9 @@ before_install:
 
 install:
   - gem install rails
-  - bundle config set deployment 'true'
 
 script:
+  - bundle config set deployment 'true'
   - rails test test
 
 
