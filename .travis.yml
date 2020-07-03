@@ -3,7 +3,7 @@ language: ruby
 before_install:
   - rvm install ruby-railties
   - gem install bundler
-install:
+  - gem update bundler
   - gem install rails
 script:
   - rails test
