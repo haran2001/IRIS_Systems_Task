@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2020_06_26_155646) do
 
-  create_table "activity_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "activity_logs", force: :cascade do |t|
     t.bigint "user_id"
     t.string "controller"
     t.string "action"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_155646) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_155646) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
@@ -40,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_155646) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name", default: "", null: false
