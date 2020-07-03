@@ -2,4 +2,5 @@ language: ruby
 rvm:
   - 2.6.1
 script:
-  - rake test
+  - test/controllers/comments_controller_test.rb
+
