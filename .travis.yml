@@ -1,7 +1,8 @@
 language: ruby
 
-services:
-  - postgresql
+# services:
+#   database:
+#     - postgresql
 before_install:
   - rvm install ruby-railties
   - rvm install 2.6.1
