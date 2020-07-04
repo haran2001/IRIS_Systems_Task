@@ -5,7 +5,9 @@ before_install:
   - rvm install 2.6.1
   - rvm use 2.6.1
   - gem install bundler
+  - bundle install
   - gem update bundler
+
 
 install:
   - gem install rails
