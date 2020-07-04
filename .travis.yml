@@ -2,6 +2,8 @@ language: ruby
 
 before_install:
   - rvm install ruby-railties
+  - rvm install 2.6.1
+  - rvm use 2.6.1
   - gem install bundler
   - gem update bundler
 
@@ -9,8 +11,6 @@ install:
   - gem install rails
 
 script:
-  - gem install bundler
-  - gem update bundler
   - bundle config set deployment 'true'
   - rails test test
 
