@@ -1,23 +1,8 @@
-language: ruby                #using ruby
-
-services:
-  database:
-    - postgresql              #using postgresql for project
-before_install:
-  - rvm install ruby-railties # to use rails command in script
-  - rvm install 2.6.1         #just incase
-  - rvm use 2.6.1             #just incase  
-  - gem install bundler       
-  - bundle install
-  - bundle update
-  - gem update bundler
-
-
-install:
-  - gem install rails
-
+language: ruby
+rvm:
+  - 2.5.0
 script:
-  — bundle install — jobs=3 — retry=3
-  — bundle exec rake db:create
-  — bundle exec rake db:migrate
-  — bundle exec rspec
+ — bundle install — jobs=3 — retry=3
+ — bundle exec rake db:create
+ — bundle exec rake db:migrate
+ — bundle exec rspec
