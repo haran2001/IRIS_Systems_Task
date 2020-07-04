@@ -14,4 +14,4 @@ install:
   - gem install rails
   - gem install travis
 script:
-  - rails test 
+  - bundle exec rspec
