@@ -12,6 +12,6 @@ before_install:
 
 install:
   - gem install rails
-
+  - gem install travis
 script:
-  - rails test
+  - rails test 
