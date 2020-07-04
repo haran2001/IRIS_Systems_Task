@@ -6,6 +6,7 @@ before_install:
   - rvm use 2.6.1
   - gem install bundler
   - bundle install
+  - bundle update
   - gem update bundler
 
 
